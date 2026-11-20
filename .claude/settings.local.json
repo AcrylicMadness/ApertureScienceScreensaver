@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xcodebuild -project ApertureScienceScreensaver.xcodeproj -scheme ApertureScienceScreensaver -configuration Debug build)",
+      "Bash(env DEVELOPER_DIR=/Applications/Xcode-beta.app/Contents/Developer xcodebuild -project ApertureScienceScreensaver.xcodeproj -scheme ApertureScienceScreensaver -configuration Debug build)",
+      "Bash(open \"x-apple.systempreferences:com.apple.Screen-Saver-Settings.extension\")",
+      "Bash(open /System/Library/PreferencePanes/ScreenSaver.prefPane)",
+      "Bash(screencapture -x /private/tmp/claude-501/-Users-acrylicm-Developer-ApertureScienceScreensaver/49622ab3-9662-4837-b227-877a8a88080a/scratchpad/settings.png)",
+      "Bash(osascript -e 'quit app \"System Settings\"')",
+      "Bash(kill 18603 18733)",
+      "Bash(env DEVELOPER_DIR=/Applications/Xcode-beta.app/Contents/Developer xcodebuild -project /Users/acrylicm/Developer/ApertureScienceScreensaver/ApertureScienceScreensaver.xcodeproj -scheme ApertureScienceScreensaver -configuration Debug build)",
+      "Bash(curl -fsSL https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch -o /private/tmp/claude-501/-Users-acrylicm-Developer-ApertureScienceScreensaver/49622ab3-9662-4837-b227-877a8a88080a/scratchpad/neofetch.sh)",
+      "Bash(python3 *)",
+      "Bash(env DEVELOPER_DIR=/Applications/Xcode-beta.app/Contents/Developer xcodebuild -project /Users/acrylicm/Developer/ApertureScienceScreensaver/ApertureScienceScreensaver.xcodeproj -scheme ApertureScienceScreensaver -configuration Release build)",
+      "Bash(env DEVELOPER_DIR=/Applications/Xcode-beta.app/Contents/Developer xcodebuild -project /Users/acrylicm/Developer/ApertureScienceScreensaver/ApertureScienceScreensaver.xcodeproj -scheme ApertureScienceScreensaver -configuration Release -showBuildSettings)",
+      "Bash(awk -F'= ' '/ BUILT_PRODUCTS_DIR /{print $2; exit}')",
+      "Bash(ditto -c -k --keepParent dist ApertureScienceScreensaver.zip)",
+      "Bash(unzip -l ApertureScienceScreensaver.zip)",
+      "Bash(security find-identity *)",
+      "Bash(xcrun notarytool *)",
+      "Bash(codesign --force --options runtime --timestamp --sign \"Developer ID Application: Kirill Averkiev \\(KYASY7DN65\\)\" dist/ApertureScienceScreensaver.saver)",
+      "Bash(codesign -dv --verbose=4 dist/ApertureScienceScreensaver.saver)",
+      "Bash(ditto -c -k --keepParent dist/ApertureScienceScreensaver.saver notarize-submission.zip)",
+      "Bash(xcrun stapler *)",
+      "Bash(spctl -a -vvv -t install dist/ApertureScienceScreensaver.saver)"
+    ]
+  }
+}
